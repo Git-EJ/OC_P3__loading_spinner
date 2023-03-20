@@ -1,0 +1,61 @@
+@mixin animation_center{
+    animation: center 5s infinite linear;
+
+    @keyframes center{
+
+        0%{
+            transform:rotateZ(0deg);
+            
+        }
+        
+        100%{
+            transform:rotateZ(360deg);
+        }
+    }
+}
+
+
+@mixin text_and_icon{
+    animation: text_and_icon 5s infinite linear;
+
+    @keyframes text_and_icon{
+
+        0%{
+            transform:rotateZ(20deg);
+        }
+        
+        50%{
+            transform:rotateZ(-200deg);
+        }
+
+        100%{
+            transform:rotateZ(-340deg);
+
+        }
+
+    }
+}
+
+
+@mixin animation_text{
+    background: linear-gradient($secondary_color 0%, $primary_color 20%, transparent 100%); 
+    background-size: 100% 200%;
+    background-position: 0 -100%;
+    animation: text 5s infinite linear;
+
+    @keyframes text{
+
+        0%{
+            background-position: 0 -100%;
+        }
+        
+        50%{
+        }
+
+        100%{
+            background-position: 0 0;
+        }
+
+    }
+}
+
