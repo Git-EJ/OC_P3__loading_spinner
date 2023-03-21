@@ -15,7 +15,7 @@
 
 
 @mixin text_and_icon{
-    animation: text_and_icon 3s infinite linear;
+    animation: text_and_icon 5s infinite linear;
 
     @keyframes text_and_icon{
 
@@ -40,13 +40,12 @@
 
 
 @mixin animation_text{
-    background: linear-gradient($secondary_color 0%, $primary_color 20%, transparent 100%);
-    // background: linear-gradient($secondary_color 0%, $primary_color 20%); 
+    // background: linear-gradient($secondary_color 0%, $primary_color 20%, transparent 100%);
+    background: linear-gradient($secondary_color 0%, $primary_color 20%); 
     // background-size: 100% 200%;     //n°1
-    background-size: 100% 300%;  //n°2
-
+    background-size: 100% 200%;  //n°2
     background-position: 0 -100%;  //position du dégradé H V
-    animation: text 3s infinite linear;
+    animation: text 1.5s infinite linear;
 
     @keyframes text{
 
@@ -55,9 +54,8 @@
         }
 
         100%{
-            // background-position: 0 0;       //n°1
+            // background-position: 0 0;  //n°1
             background-position: 0 100%; //n°2
         }
     }
 }
-
