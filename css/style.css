@@ -82,15 +82,25 @@ body ::-webkit-scrollbar {
   border: 4px solid orange;
 }
 
-.center_in {
-  animation: center 5s infinite linear;
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 500px;
-  box-shadow: inset 0px 0px 50px 10px rgba(147, 86, 220, 0.267), 7px 7px 7px rgba(255, 121, 218, 0.705);
+  width: 100%;
+  height: auto;
+  margin: 0.8rem;
+  border: 4px solid rgb(0, 255, 13);
+}
+
+.center_out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: center 3s infinite linear;
+  height: clamp(250px, 40vw, 800px);
+  width: clamp(250px, 40vw, 800px);
   position: relative;
+  box-shadow: 7px 7px 3px rgba(255, 121, 218, 0.705), 7px 7px 7px 7px rgba(147, 86, 220, 0.705);
   border-radius: 50%;
 }
 @keyframes center {
@@ -102,18 +112,32 @@ body ::-webkit-scrollbar {
   }
 }
 
+.center_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(250px, 40vw, 800px);
+  width: clamp(250px, 40vw, 800px);
+  position: absolute;
+  box-shadow: inset 0px 0px 50px 25px rgba(147, 86, 220, 0.267);
+  border-radius: 50%;
+}
+
 .text_and_icon {
-  animation: text_and_icon 5s infinite linear;
+  animation: text_and_icon 3s infinite linear;
 }
 @keyframes text_and_icon {
   0% {
-    transform: rotateZ(20deg);
+    transform: rotateZ(0deg);
   }
-  50% {
-    transform: rotateZ(-200deg);
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  75% {
+    transform: rotateZ(10deg);
   }
   100% {
-    transform: rotateZ(-340deg);
+    transform: rotateZ(0deg);
   }
 }
 .text_and_icon .fa-utensils,
@@ -123,12 +147,12 @@ body ::-webkit-scrollbar {
   align-items: center;
   flex-direction: column;
   background: linear-gradient(#FF79DA 0%, #9356DC 20%, transparent 100%);
-  background-size: 100% 200%;
+  background-size: 100% 300%;
   background-position: 0 -100%;
-  animation: text 5s infinite linear;
+  animation: text 3s infinite linear;
   width: 100%;
   height: auto;
-  font-size: 12vw;
+  font-size: clamp(3.5rem, 10vw, 12rem);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -138,11 +162,12 @@ body ::-webkit-scrollbar {
     background-position: 0 -100%;
   }
   100% {
-    background-position: 0 0;
+    background-position: 0 100%;
   }
 }
 .text_and_icon .text {
   font-family: "Shrikhand", cursive;
+  padding: 0 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,10 @@
 @mixin animation_center{
-    animation: center 5s infinite linear;
+    animation: center 3s infinite linear;
 
     @keyframes center{
 
         0%{
-            transform:rotateZ(0deg);
-            
+            transform:rotateZ(0deg); 
         }
         
         100%{
@@ -16,46 +15,49 @@
 
 
 @mixin text_and_icon{
-    animation: text_and_icon 5s infinite linear;
+    animation: text_and_icon 3s infinite linear;
 
     @keyframes text_and_icon{
 
         0%{
-            transform:rotateZ(20deg);
+            transform:rotateZ(0deg);
         }
         
-        50%{
-            transform:rotateZ(-200deg);
+        25%{
+            transform:rotateZ(-10deg);
+        }
+
+        75%{
+            transform:rotateZ(10deg);
         }
 
         100%{
-            transform:rotateZ(-340deg);
+            transform:rotateZ(0deg);
 
         }
-
     }
 }
 
 
 @mixin animation_text{
-    background: linear-gradient($secondary_color 0%, $primary_color 20%, transparent 100%); 
-    background-size: 100% 200%;
-    background-position: 0 -100%;
-    animation: text 5s infinite linear;
+    background: linear-gradient($secondary_color 0%, $primary_color 20%, transparent 100%);
+    // background: linear-gradient($secondary_color 0%, $primary_color 20%); 
+    // background-size: 100% 200%;     //n°1
+    background-size: 100% 300%;  //n°2
+
+    background-position: 0 -100%;  //position du dégradé H V
+    animation: text 3s infinite linear;
 
     @keyframes text{
 
         0%{
             background-position: 0 -100%;
         }
-        
-        50%{
-        }
 
         100%{
-            background-position: 0 0;
+            // background-position: 0 0;       //n°1
+            background-position: 0 100%; //n°2
         }
-
     }
 }
 
