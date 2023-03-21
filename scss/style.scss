@@ -32,30 +32,30 @@ body {
     width:100%;
     height:auto;
     margin: 0.8rem;
-    // background:$tertiary_color;
-    border: 4px solid rgb(0, 255, 13);
+    // border: 4px solid rgb(0, 255, 13);
 }
 
 
 .center_out{
     @include flex_center;
     @include animation_center;
-    height:clamp(250px, 40vw, 800px);
-    width:clamp(250px, 40vw, 800px);
+    height:clamp(225px, 40vw, 800px);
+    width:clamp(225px, 40vw, 800px);
     position:relative;
     box-shadow: 7px 7px 3px rgba($secondary_color, 0.705), // X  Y  blur-radius/rayon de flou  spread-radius/rayon étalement
                 7px 7px 7px 7px rgba($primary_color, 0.705);
     border-radius:50%;
+    // background: fff;
 
 }
 
 .center_in{
     @include flex_center;
-    height:clamp(250px, 40vw, 800px);
-    width:clamp(250px, 40vw, 800px);
+    height:clamp(325px, 60vw, 900px);
+    width:clamp(325px, 60vw, 900px);
     position:absolute;
     box-shadow: inset 0px 0px 50px 25px rgba($primary_color, 0.267);
-    border-radius:50%;
+    border-radius:50%; 
 }
 
 
