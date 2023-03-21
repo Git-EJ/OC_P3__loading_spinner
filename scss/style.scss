@@ -38,7 +38,7 @@ body {
 
 .center_out{
     @include flex_center;
-    @include animation_center;
+    @include loader_animation_center;
     position:relative;
     width:45vw;
     height:45vw;
@@ -63,12 +63,12 @@ body {
 
 
 .text_and_icon{
-    @include text_and_icon;
+    @include loader_text_and_icon;
 
     .fa-utensils,
     .text{
         @include flex_center_column;
-        @include animation_text;
+        @include loader_animation_text;
         width:100%;
         height:auto;
         font-size: clamp(2rem, 15vw, 7rem);

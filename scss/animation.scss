@@ -1,7 +1,7 @@
-@mixin animation_center{
+@mixin loader_animation_center{
     animation: center 3s infinite linear;
 
-    @keyframes center{
+    @keyframes loader_center{
 
         0%{
             transform:rotateZ(0deg); 
@@ -14,10 +14,10 @@
 }
 
 
-@mixin text_and_icon{
+@mixin loader_text_and_icon{
     animation: text_and_icon 5s infinite linear;
 
-    @keyframes text_and_icon{
+    @keyframes loader_text_and_icon{
 
         0%{
             transform:rotateZ(0deg);
@@ -39,15 +39,15 @@
 }
 
 
-@mixin animation_text{
+@mixin loader_animation_text{
     // background: linear-gradient($secondary_color 0%, $primary_color 20%, transparent 100%);
     background: linear-gradient($secondary_color 0%, $primary_color 20%); 
     // background-size: 100% 200%;     //n°1
     background-size: 100% 200%;  //n°2
     background-position: 0 -100%;  //position du dégradé H V
-    animation: text 1.5s infinite linear;
+    animation: loader_text 1.5s infinite linear;
 
-    @keyframes text{
+    @keyframes loader_text{
 
         0%{
             background-position: 0 -100%;
